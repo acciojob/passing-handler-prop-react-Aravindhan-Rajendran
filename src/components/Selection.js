@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const Selection = (props) => {
   const [background, setBackground] = useState('');
 
-  const { applyColor } = props;
+  const { applyColor, colorId } = props;
 
   const handleClick = () => {
     applyColor(setBackground);
@@ -23,6 +23,7 @@ const Selection = (props) => {
     <div 
       style={boxStyle}
       onClick={handleClick}
+      data-testid={colorId} // Add data-testid attribute
     >
       {/* Content inside the box, if any */}
     </div>
@@ -30,4 +31,3 @@ const Selection = (props) => {
 }
 
 export default Selection;
-
