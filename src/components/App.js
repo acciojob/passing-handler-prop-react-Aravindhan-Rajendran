@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import '../styles/App.css';
 import Selection from './Selection';
 import ColourSelector from './ColourSelector';
 
@@ -46,8 +45,12 @@ const App = () => {
 
       <div className='row' id="children-wrapper">
         {
-          ["selection1", "selection2", "selection3"].map(key => (
-            <Selection key={key} applyColor={applyColor} />
+          ["blue", "orange", "green"].map(color => (
+            <Selection 
+              key={color} 
+              colorId={color} // Pass colorId to Selection
+              applyColor={applyColor} 
+            />
           ))
         }
       </div>
