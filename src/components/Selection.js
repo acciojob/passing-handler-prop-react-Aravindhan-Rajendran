@@ -22,8 +22,9 @@ const Selection = (props) => {
   return (
     <div 
       style={boxStyle}
+      className="fix-box"  // Add the class name "fix-box"
       onClick={handleClick}
-      data-testid={colorId} // Add data-testid attribute
+      data-testid={colorId}  // Add data-testid attribute
     >
       {/* Content inside the box, if any */}
     </div>
